@@ -1,0 +1,5 @@
+SIGNAL_CLI_API_URL: "http://127.0.0.1:8080/v2/send"  # Signal-cli REST API endpoint
+SIGNAL_RECIPIENT: "+12223334444"  # Recipient's phone number
+SIGNAL_ACCOUNT: "+14445556666"  # Phone number to send from
+SMTP_PORT: 1025  # Port to listen for SMTP connections
+

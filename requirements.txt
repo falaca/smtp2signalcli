@@ -1,1 +1,4 @@
-aiosmtpd==1.4.4.post2
+aiosmtpd>=1.4.4.post2
+requests>=2.31.0
+PyYAML>=6.0.1
+pyOpenSSL>=23.2.0

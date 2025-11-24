@@ -147,7 +147,7 @@ class SignalHandler(AsyncMessage):
             content_type = part.get_content_type()
             disposition = str(part.get("Content-Disposition"))
 
-            if content_type == "image/jpeg" and "attachment" in disposition:
+            if content_type in {"image/jpeg", "image/jpg", "image/tiff", "application/pdf"} and "attachment" in disposition:
                 # Read the attachment content and encode it to base64
                 attachment_data = part.get_payload(decode=True)
                 base64_data = base64.b64encode(attachment_data).decode("utf-8")
@@ -167,7 +167,7 @@ class Authenticator:
         return AuthResult(success=False)
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.DEBUG)
+    logging.basicConfig(level=logging.INFO)
     handler = SignalHandler()
     auth = Authenticator()
 
